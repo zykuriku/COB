@@ -21,9 +21,9 @@ class Gender extends StatelessWidget {
           child: Text(
             t,
             style: TextStyle(
-              fontSize: 15.0,
-              color: Colors.black,
-            ),
+                fontSize: 15.0,
+                color: Colors.black,
+                fontWeight: FontWeight.w800),
           ),
         ),
       ],

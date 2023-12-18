@@ -15,7 +15,8 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('BMI Result')),
+        centerTitle: true,
+        title: Text('BMI Result'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -32,21 +33,28 @@ class Result extends StatelessWidget {
                 children: [
                   Container(
                     child: Text(
-                      'Result Time!',
-                      style: TextStyle(color: Colors.purple, fontSize: 18.0),
+                      'RESULT TIME!',
+                      style: TextStyle(color: Colors.purple, fontSize: 20.0),
                     ),
                   ),
                   Text(
                     resultText,
                     style: TextStyle(
                         color: resultColor,
-                        fontSize: 20.0,
+                        fontSize: 30.0,
                         fontWeight: FontWeight.w500),
                   ),
-                  Text(bmiResult),
+                  Text(
+                    bmiResult,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 25.0,
+                        fontWeight: FontWeight.w500),
+                  ),
                   Text(
                     desc,
                     textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 18.0),
                   ),
                 ],
               ),

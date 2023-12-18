@@ -10,8 +10,9 @@ import 'calculate_bmi.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 const bottomCheight = 70.0;
-const color1 = Color(0xFFCCB4EE);
+const color1 = Color(0xFFDACAFF);
 const color2 = Color(0xFFC39BEA);
+const ogColor = Color(0xFF994CD3);
 int age = 15;
 
 enum Genderr { male, female, nothing }
@@ -47,7 +48,9 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('BMI CALCULATOR')),
+          // titleSpacing: 10.0,
+          centerTitle: true,
+          title: Text('BMI CALCULATOR'),
         ),
         body: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -92,7 +95,11 @@ class _InputPageState extends State<InputPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Center(
-                            child: Text('Age'),
+                            child: Text(
+                              'Age',
+                              style: TextStyle(
+                                  fontSize: 18.0, fontWeight: FontWeight.w800),
+                            ),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -108,7 +115,10 @@ class _InputPageState extends State<InputPage> {
                               SizedBox(
                                 width: 15.0,
                               ),
-                              Text(age.toString()),
+                              Text(
+                                age.toString(),
+                                style: TextStyle(fontSize: 18.0),
+                              ),
                               SizedBox(
                                 width: 15.0,
                               ),
@@ -136,9 +146,9 @@ class _InputPageState extends State<InputPage> {
                               child: Text(
                             'Set height',
                             style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15.0,
-                            ),
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w800),
                           )),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -180,9 +190,9 @@ class _InputPageState extends State<InputPage> {
                               child: Text(
                             'Set weight',
                             style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 18.0,
-                            ),
+                                color: Colors.black,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w800),
                           )),
                           AnimatedWeightPicker(
                             min: min,
@@ -190,11 +200,11 @@ class _InputPageState extends State<InputPage> {
                             squeeze: 5.0,
                             majorIntervalTextColor: Color(0xFFBF7EF1),
                             dialColor: Color(0xFF994CD3),
-                            majorIntervalColor: color2,
-                            subIntervalColor: color2,
-                            minorIntervalColor: color2,
-                            selectedValueColor: Colors.black,
-                            suffixTextColor: Colors.black,
+                            majorIntervalColor: ogColor,
+                            subIntervalColor: ogColor,
+                            minorIntervalColor: ogColor,
+                            selectedValueColor: ogColor,
+                            suffixTextColor: ogColor,
                             onChange: (newValue) {
                               setState(() {
                                 weight = newValue;
@@ -236,11 +246,14 @@ class RoundButton extends StatelessWidget {
           height: 50.0,
         ),
         onPressed: onPressed,
-        fillColor: color2,
-        child: Icon(icon),
+        fillColor: ogColor,
+        child: Icon(
+          icon,
+          color: color1,
+        ),
         elevation: 6.0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(5.0)),
+          borderRadius: BorderRadius.all(Radius.circular(50.0)),
         ));
   }
 }

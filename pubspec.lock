@@ -10,7 +10,7 @@ packages:
     source: hosted
     version: "1.3.12"
   animated_weight_picker:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: animated_weight_picker
       sha256: "49d59214903e25f0354d7ade9a9ed01dadb51292514bd8016afcad39ae5e2f29"
@@ -50,7 +50,7 @@ packages:
     source: hosted
     version: "1.1.1"
   cloud_firestore:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: cloud_firestore
       sha256: fabfa9b20e752ea55841b0177620a817baf3c7cd12854f339f7daadb6969ee5a
@@ -98,7 +98,7 @@ packages:
     source: hosted
     version: "1.3.1"
   firebase:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: firebase
       sha256: cbff777369d19bd0535ccca0005518172953394246620ff8c1021072299d452d
@@ -106,7 +106,7 @@ packages:
     source: hosted
     version: "9.0.3"
   firebase_auth:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: firebase_auth
       sha256: a9281f9b149ad4cffbfe91725ee5159c63aca2f27c05e2e87052fc240abe212c
@@ -130,7 +130,7 @@ packages:
     source: hosted
     version: "5.8.7"
   firebase_core:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: firebase_core
       sha256: "45f3f9babfc6f56fb94c3cd11584cf3c9672868228373b699b94427010e01dc3"
@@ -177,7 +177,7 @@ packages:
     source: sdk
     version: "0.0.0"
   font_awesome_flutter:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: font_awesome_flutter
       sha256: "52671aea66da73b58d42ec6d0912b727a42248dd9a7c76d6c20f275783c48c08"
