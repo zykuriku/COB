@@ -8,7 +8,7 @@ class BigCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: bchild,
-      height: 150.0,
+      height: 50.0,
       width: 180.0,
       margin: EdgeInsets.symmetric(horizontal: 2.0, vertical: 5.0),
       decoration: BoxDecoration(

@@ -13,7 +13,7 @@ class SmallCard extends StatelessWidget {
       child: Container(
         child: schild,
         height: 120.0,
-        width: 100.0,
+        width: 180.0,
         margin: EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.0),

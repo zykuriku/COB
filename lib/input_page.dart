@@ -48,7 +48,6 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          // titleSpacing: 10.0,
           centerTitle: true,
           title: Text('BMI CALCULATOR'),
         ),
@@ -58,31 +57,27 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: SmallCard(
-                        onPress: () {
-                          setState(() {
-                            selectedGender = Genderr.male;
-                          });
-                        },
-                        colour:
-                            selectedGender == Genderr.male ? color2 : color1,
-                        schild: Gender(iconn: FontAwesomeIcons.mars, t: 'Male'),
-                      ),
+                    SmallCard(
+                      onPress: () {
+                        setState(() {
+                          selectedGender = Genderr.male;
+                        });
+                      },
+                      colour: selectedGender == Genderr.male ? color2 : color1,
+                      schild: Gender(iconn: FontAwesomeIcons.mars, t: 'Male'),
                     ),
-                    Expanded(
-                      child: SmallCard(
-                        onPress: () {
-                          setState(() {
-                            selectedGender = Genderr.female;
-                          });
-                        },
-                        colour:
-                            selectedGender == Genderr.female ? color2 : color1,
-                        schild:
-                            Gender(iconn: FontAwesomeIcons.venus, t: 'Female'),
-                      ),
+                    SmallCard(
+                      onPress: () {
+                        setState(() {
+                          selectedGender = Genderr.female;
+                        });
+                      },
+                      colour:
+                          selectedGender == Genderr.female ? color2 : color1,
+                      schild:
+                          Gender(iconn: FontAwesomeIcons.venus, t: 'Female'),
                     ),
                   ],
                 ),
@@ -91,94 +86,97 @@ class _InputPageState extends State<InputPage> {
                   flex: 2,
                   child: BigCard(
                       bchild: Expanded(
-                          child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                            child: Text(
-                              'Age',
-                              style: TextStyle(
-                                  fontSize: 18.0, fontWeight: FontWeight.w800),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Center(
+                              child: Text(
+                                'Age',
+                                style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.w800),
+                              ),
                             ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              RoundButton(
-                                onPressed: () {
-                                  setState(() {
-                                    age--;
-                                  });
-                                },
-                                icon: FontAwesomeIcons.minus,
-                              ),
-                              SizedBox(
-                                width: 15.0,
-                              ),
-                              Text(
-                                age.toString(),
-                                style: TextStyle(fontSize: 18.0),
-                              ),
-                              SizedBox(
-                                width: 15.0,
-                              ),
-                              RoundButton(
-                                onPressed: () {
-                                  setState(() {
-                                    age++;
-                                  });
-                                },
-                                icon: FontAwesomeIcons.plus,
-                              )
-                            ],
-                          )
-                        ],
-                      )),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                RoundButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      age--;
+                                    });
+                                  },
+                                  icon: FontAwesomeIcons.minus,
+                                ),
+                                SizedBox(
+                                  width: 15.0,
+                                ),
+                                Text(
+                                  age.toString(),
+                                  style: TextStyle(fontSize: 18.0),
+                                ),
+                                SizedBox(
+                                  width: 15.0,
+                                ),
+                                RoundButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      age++;
+                                    });
+                                  },
+                                  icon: FontAwesomeIcons.plus,
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
                       colour: color1)),
               Expanded(
                   flex: 2,
                   child: BigCard(
                       bchild: Expanded(
-                          child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                              child: Text(
-                            'Set height',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.w800),
-                          )),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.baseline,
-                            textBaseline: TextBaseline.alphabetic,
-                            children: [
-                              Text(
-                                height.toString(),
-                                style: TextStyle(
-                                  fontSize: 20.0,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Center(
+                                child: Text(
+                              'Set height',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w800),
+                            )),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.baseline,
+                              textBaseline: TextBaseline.alphabetic,
+                              children: [
+                                Text(
+                                  height.toString(),
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                  ),
                                 ),
-                              ),
-                              Text('cm'),
-                            ],
-                          ),
-                          Slider(
-                            value: height.toDouble(),
-                            onChanged: (double newValue) {
-                              setState(() {
-                                height = newValue.round();
-                              });
-                            },
-                            min: 130.0,
-                            max: 200.0,
-                            activeColor: Color(0xFF994CD3),
-                            inactiveColor: color2,
-                            thumbColor: Color(0xFF994CD3),
-                          )
-                        ],
-                      )),
+                                Text('cm'),
+                              ],
+                            ),
+                            Slider(
+                              value: height.toDouble(),
+                              onChanged: (double newValue) {
+                                setState(() {
+                                  height = newValue.round();
+                                });
+                              },
+                              min: 130.0,
+                              max: 200.0,
+                              activeColor: Color(0xFF994CD3),
+                              inactiveColor: color2,
+                              thumbColor: Color(0xFF994CD3),
+                            )
+                          ],
+                        ),
+                      ),
                       colour: color1)),
               Expanded(
                   flex: 3,
